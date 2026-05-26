@@ -3,9 +3,12 @@
   "version": "2.10.2",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "add-domain-to-build-files": "echo rustbreeder.com > dist/CNAME",
     "deploy": "gh-pages -d dist",
     "bad": "npm run build && npm run add-domain-to-build-files && npm run deploy",

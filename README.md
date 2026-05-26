@@ -51,7 +51,7 @@ Special thanks to the Rust community and all the contributors who have provided 
 
 ## Required Software
 
-- [NodeJS](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/) >= 18 (Node 20+ recommended)
 
 ## Commands
 
@@ -65,8 +65,10 @@ npm install
 
 ### Compiles and Hot-Reloads for Development
 
+On Node 17+ you may need to run with the legacy OpenSSL provider:
+
 ```
-npm run serve
+NODE_OPTIONS=--openssl-legacy-provider npm run serve
 ```
 
 ### Compiles and Minifies for Production
