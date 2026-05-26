@@ -10,5 +10,6 @@ export default defineConfig({
   },
   server: {
     port: 8080,
+    host: true, // Expose to all interfaces (needed when running inside LXC / remote dev)
   },
 })
