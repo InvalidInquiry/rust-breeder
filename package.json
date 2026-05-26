@@ -4,12 +4,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vite",
+    "serve": "vite",
+    "build": "vite build",
     "add-domain-to-build-files": "echo rustbreeder.com > dist/CNAME",
     "deploy": "gh-pages -d dist",
     "bad": "npm run build && npm run add-domain-to-build-files && npm run deploy",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vitest",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -52,6 +53,8 @@
     "typescript": "^4.6.4",
     "vue-cli-plugin-vuetify": "~2.0.5",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0"
+    "vuetify-loader": "^1.3.0",
+    "vite": "^5.2.0",
+    "@vitejs/plugin-vue2": "^2.3.1"
   }
 }
